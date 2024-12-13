@@ -20,13 +20,15 @@
             </div>
         </section>
         <div class="form-wrapper">
-            <div class="input-boxes">
-                <input type="text" class="textfield" placeholder="Name">
-                <input type="email" class="textfield" placeholder="Email">
-                <input type="text" class="textfield" placeholder="Subject">
-                <textarea name="" class="textfield" id="" cols="30" rows="5" placeholder="Message"></textarea>
-                <div class="btn">Submit</div>
-            </div>
+            <form action="#" method="POST">
+                <div class="input-boxes">
+                    <input type="text" class="textfield" name="name" placeholder="Name" required>
+                    <input type="email" class="textfield" name="email" placeholder="Email" required>
+                    <input type="text" class="textfield" name="subject" placeholder="Subject" required>
+                    <textarea name="message" class="textfield" placeholder="Message" rows="5" required></textarea>
+                    <button type="submit" class="btn">Submit</button>
+                </div>
+            </form>
         </div>
 
         <div class="menu">
