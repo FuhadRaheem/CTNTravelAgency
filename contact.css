@@ -112,26 +112,33 @@
 }
 
 .form-wrapper {
-    height: 70vh;
-    width: 40vw;
+    height: auto;
+    width: 90%; /* Set relative width */
+    max-width: 600px; /* Limit maximum width for large screens */
     background: #03a9f4;
-    position: absolute;
-    top: 55vh;
-    left: 50%;
-    transform: translate(-50%, -0%);
-    z-index: 10000;
+    position: relative; /* Change to relative for better alignment on small screens */
+    top: auto;
+    left: auto;
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 20px;
+    border-radius: 10px; /* Add rounded corners */
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .input-boxes {
-    position: relative;
-    margin: 50px;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
 }
 
 .textfield {
-    font-size: 18px; 
-    border: none;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    font-size: 16px;
+    border: 1px solid #ddd; /* Add border */
+    border-radius: 5px; /* Add rounded corners */
+    padding: 10px;
+    width: 100%; /* Full width for smaller screens */
+    max-width: 500px; /* Limit maximum width */
+    margin-bottom: 15px;
 }
 
 .textfield:hover {
@@ -147,25 +154,22 @@ input {
 }
 
 textarea {
-    display: block;
-    width: 450px;
-    padding: 5px;
-    margin: 20px auto;
-    resize: none;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 100%;
+    max-width: 500px;
+    resize: vertical;
 }
 
 .btn {
-    height: 50px;
-    width: 300px;
-    border-radius: 5px;
-    border: none;
-    background: #1a941a;
+    display: block;
+    width: 100%;
+    max-width: 200px;
     margin: 20px auto;
-    text-align: center;
-    color: #fff;
-    line-height: 50px;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-    text-shadow:rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -255,6 +259,39 @@ textarea {
     .footer {
       font-size: 1em;
   }
+}
+
+@media screen and (max-width: 768px) {
+    .form-wrapper {
+        padding: 10px;
+        width: 95%;
+    }
+
+    .textfield {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    textarea {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .btn {
+        font-size: 14px;
+        max-width: 150px;
+    }
+}
+
+.btn:hover {
+    background: #028a3d;
+    transition: background 0.3s ease;
+}
+
+.textfield:focus {
+    outline: none;
+    border-color: #03a9f4;
+    box-shadow: 0 0 5px rgba(3, 169, 244, 0.5);
 }
 
 
